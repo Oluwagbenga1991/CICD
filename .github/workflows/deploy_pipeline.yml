@@ -173,7 +173,7 @@ jobs:
     name: Start self-hosted EC2 runner
     needs: 
       - configure_aws_credentials
-      - ami-01bdd2ae854788489
+      - deploy_aws_infrastructure
     if: needs.deploy_aws_infrastructure.outputs.terraform_action != 'destroy'
     runs-on: ubuntu-latest
     steps:
