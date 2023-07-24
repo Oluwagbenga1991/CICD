@@ -10,7 +10,7 @@ env:
   AWS_REGION: us-east-1
   TERRAFORM_ACTION: apply
   GITHUB_USERNAME: Oluwagbenga1991
-  REPOSITORY_NAME: App-code-cicd
+  REPOSITORY_NAME: app-codes
   WEB_FILE_ZIP: rentzone.zip
   WEB_FILE_UNZIP: rentzone
 
