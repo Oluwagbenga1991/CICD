@@ -266,13 +266,13 @@ jobs:
   # Create environment file and export to S3 
   export_env_variables:
     name: Create environment file and export to S3 
-    needs: ubuntu-latest
+    needs: 
       - configure_aws_credentials
       - deploy_aws_infrastructure
       - start_runner
       - build_and_push_image
     if: needs.deploy_aws_infrastructure.outputs.terraform_action != 'destroy'
-    runs-on: 
+    runs-on: ubuntu-latest
     steps:
       - name: Export environment variable values to file
         env:
