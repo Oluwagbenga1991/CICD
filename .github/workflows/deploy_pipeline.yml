@@ -322,7 +322,7 @@ jobs:
 
       - name: Copy the sql folder into the Flyway sub-directory
         run: |
-          cp -r sql flyway-${{  }}/
+          cp -r sql flyway-${{ env.FLYWAY_VERSION }}/
 
       - name: Run Flyway migrate command
         env:
