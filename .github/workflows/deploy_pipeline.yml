@@ -13,7 +13,7 @@ env:
   REPOSITORY_NAME: app-codes
   WEB_FILE_ZIP: rentzone.zip
   WEB_FILE_UNZIP: rentzone
-  FLYWAY_VERSION: 9.8.1
+  FLYWAY_VERSION: 9.21.1
 
 
 jobs:
@@ -311,10 +311,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
-      - name: Download Flyway
-        run: |
-          wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/${{ env.FLYWAY_VERSION }}/flyway-commandline-${{ env.FLYWAY_VERSION }}-linux-x64.tar.gz | tar xvz && sudo ln -s `pwd`/flyway-${{ env.FLYWAY_VERSION }}/flyway /usr/local/bin 
 
       - name: Remove the placeholder (sql) directory
         run: |
